@@ -9,27 +9,32 @@
 <body>
     <section>
         <div>
+            <div>
+                <button  onclick="j1();">JSS 1</button>
+                <button  onclick="j2();">JSS 2</button>
+                <button  onclick="j3();">JSS 3</button>
+            </div>
             <form action="" name="form">
-                <div>
+                <div id="jss1">
                     1. What is my name? <br>
                     <input type="radio" name="question1" value="1a" id=""> Deen <br>
                     <input type="radio" name="question1" value="1b" id=""> Dean <br>
                     <input type="radio" name="question1" value="1c" id=""> Dyn <br>
-                </div><br><br>
+                </div> 
                 
-                <div>
+                <div id="jss2">
                     2. What is my age? <br>
                     <input type="radio" name="question2" value="2a" id=""> 34 <br>
                     <input type="radio" name="question2" value="2b" id=""> 78 <br>
                     <input type="radio" name="question2" value="2c" id=""> 65 <br>
-                </div><br><br>
+                </div> 
                 
-                <div>   
+                <div id="jss3">   
                     3. What is my grade? <br>
                     <input type="radio" name="question3" value="3a" id=""> A <br>
                     <input type="radio" name="question3" value="3b" id=""> B <br>
                     <input type="radio" name="question3" value="3c" id=""> C <br>
-                </div><br><br>
+                </div> <br>
 
                 <input type="button" onclick="getInfo();" value="Submit">
             </form>
@@ -37,5 +42,29 @@
     </section>
 </body>
 </html>
+
+<script>
+    function j1(){
+        document.getElementById('jss1').style.display = 'block';
+        document.getElementById('jss2').style.display = 'none';
+        document.getElementById('jss3').style.display = 'none';
+    }
+
+    function j2(){
+        document.getElementById('jss2').style.display = 'block';
+        document.getElementById('jss1').style.display = 'none';
+        document.getElementById('jss3').style.display = 'none';
+    }
+
+    function j3(){
+        document.getElementById('jss3').style.display = 'block';
+        document.getElementById('jss1').style.display = 'none';
+        document.getElementById('jss2').style.display = 'none';
+    }
+
+    document.getElementById('jss1').style.display = 'none';
+    document.getElementById('jss2').style.display = 'none';
+    document.getElementById('jss3').style.display = 'none';
+</script>
 
 <script src="index.js"></script>

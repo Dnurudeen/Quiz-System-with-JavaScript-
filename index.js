@@ -28,4 +28,6 @@ function getInfo(){
     }else if(quescount <= 3){
         document.write ("<b>Remark: </b>" + "<p style='color: green;'>Excellent Performace...</p>");
     }
+
+    document.body.style.backgroundColor = "grey";
 }
