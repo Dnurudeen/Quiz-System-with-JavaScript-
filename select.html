@@ -1,0 +1,140 @@
+<section class="form5 cid-shx0d8DN8a" id="form5-21">
+    
+    
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Ordering Form</strong>
+                </h3>
+                <p align="center">Fill out the form to make your order!</p>
+            
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="hUDqPEcaime+8Xnvff1DZZXyfGiz9bNBhbFDG9E+sDfRM1/mnsk0DOYwnNQZ9VnFpdrSf6ZVYX60cy8PDB6843y2iHVPxGcLdtP4yT3Q3S+hTgVSWoqk3vXaT0y+SahX">
+                    <div class="">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for patronizing Bukka Spot Food</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                            problem!</div>
+                        </div>
+                    <div class="dragArea row">
+                        <div class="col-md col-sm-12 form-group" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form5-21">
+                        </div>
+                        <div class="col-md col-sm-12 form-group" data-for="tel no">
+                            <input type="tel" name="tel" placeholder="Tel no." data-form-field="Tel no." class="form-control" value="" id="email-form5-21">
+                        </div>
+                        <div class="col-12 form-group" data-for="meal">
+                            <input type="text" name="meal" placeholder="Meal" value="<?php $meal = $_GET['meal']; echo $meal; ?>" data-form-field="Meal" class="form-control" value="" id="url-form5-21">
+                        </div>
+                        <div class="col-12 form-group" data-for="price">
+                            <input type="tel" name="price" placeholder="Price" value="<?php $price = $_GET['price']; echo $price; ?>" data-form-field="Price" class="form-control" value="" id="url-form5-21">
+                        </div>
+                        <div class="col-12 form-group" data-for="address">
+                            <input type="text" name="address" placeholder="Address e.g No 22, Queens street, Modu, Lagos..." data-form-field="Address" class="form-control" value="" id="url-form5-21">
+                        </div>
+                        <div class="container delivery">
+                            <h5 class=""><b>Delivery details...</b></h5>
+                            <div class="container-fluid">
+                                <table border="1" height="auto" width="100%">
+                                    <tr>
+                                        <td><b>Meal name</b></td>
+                                        <td><b>Price</b></td>
+                                        <td><b>Delivery Charge</b></td>
+                                        <td><b>Total Price</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><?php $meal = $_GET['meal']; echo $meal; ?></td>
+                                        <td><?php $price = $_GET['price']; echo $price; ?></td>
+                                        <td>200</td>
+                                        <td><?php $price = $_GET['price']; $totalprice = $price + 200; echo $totalprice; ?></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div> 
+
+                        <div class="container">
+                            <div class="payment">
+                                <h5><b>Payment Details...</b></h5>
+                            </div>
+                        
+                            <div class="select form-group" data-for="Payment Method">
+                                <div>
+                                    <select name="paymentmethod" data-form-field="Payment Method" class="form-control" id="test" onchange="showDiv()">
+                                        <option value="">Select payment method</option>
+                                        <option value="Pay On Delivery">Pay On Delivery</option>
+                                        <option value="Pay by Bank Transfer">Pay by Bank Transfer</option>
+                                    </select> <br><br>
+
+                                    <div id="hidden_div_pod" style="display: none; font-size: 16px;">
+                                        <ul>
+                                            <li><b>If Pay on Delivery</b></li>
+                                            <div class="container-fluid">
+                                                <p style="font-size: 14px;">Payment will be made at the point of Delivery. <br>Total price to be paid is <b>(#<?php $price = $_GET['price']; echo $totalprice; ?>)</b>...</p>
+                                            </div>
+
+                                        </ul>
+                                    </div>
+
+                                    <div id="hidden_div_pbt" style="display: none; font-size: 16px;">
+                                        <ul>
+                                            <li style="font-size: 14px;"><b>If Pay by Bank Transfer</b></li>
+                                            <div class="container-fluid" style="font-size: 14px;">
+                                                <p>You are to make transfer of the sum of <b>(#<?php $price = $_GET['price']; echo $totalprice; ?>)</b> to the account below, before delivery of meal will be made...</p>
+                                                <h6 style="font-size: 13px;"><b>Bank Details</b></h6>
+                                                <p><b>Account no.:</b> 0011061231</p>
+                                                <p><b>Bank name:</b> GT Bank</p>
+                                                <p><b>Account name:</b> Jimoh Ramon Olayemi</p>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>         
+                        </div>
+                    
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-secondary display-4">Send Order</button></div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+		function showDiv(select){
+			getSelectValue = document.getElementById("test").value;
+			function pod(){
+				if (getSelectValue == "Pay On Delivery") {
+					document.getElementById('hidden_div_pod').style.display = "block";
+				}
+				else {
+					document.getElementById('hidden_div_pod').style.display = "none";
+				}
+			}
+
+			function pbt(){
+				if(getSelectValue == "Pay by Bank Transfer") {
+					document.getElementById('hidden_div_pbt').style.display = "block";
+				}
+				else {
+					document.getElementById('hidden_div_pbt').style.display = "none";
+				}
+			}
+			
+
+			if (pod() == true){
+				console.log (pod());
+			}else{
+				console.log ();
+			}
+
+			if (pbt() == true){
+				console.log ( pbt());
+			}else{
+				console.log ();
+			}
+		}
+	</script>
